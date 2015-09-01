@@ -64,18 +64,18 @@ module CC2420TransmitP @safe() {
 
   uses interface Resource as SpiResource;
   uses interface ChipSpiResource;
-  uses interface CC2420Fifo as TXFIFO;
-  uses interface CC2420Ram as TXFIFO_RAM;
-  uses interface CC2420Register as TXCTRL;
-  uses interface CC2420Strobe as SNOP;
-  uses interface CC2420Strobe as STXON;
-  uses interface CC2420Strobe as STXONCCA;
-  uses interface CC2420Strobe as SFLUSHTX;
-  uses interface CC2420Register as MDMCTRL1;
+  uses interface CC2420Fifo as TXFIFO;				// P62
+  uses interface CC2420Ram as TXFIFO_RAM;			// 
+  uses interface CC2420Register as TXCTRL;		// P62
+  uses interface CC2420Strobe as SNOP;				// P61
+  uses interface CC2420Strobe as STXON;				// P61
+  uses interface CC2420Strobe as STXONCCA;		// P61
+  uses interface CC2420Strobe as SFLUSHTX;		// P61
+  uses interface CC2420Register as MDMCTRL1;	// P62
 
-  uses interface CC2420Strobe as STXENC;
-  uses interface CC2420Register as SECCTRL0;
-  uses interface CC2420Register as SECCTRL1;
+  uses interface CC2420Strobe as STXENC;			// P61
+  uses interface CC2420Register as SECCTRL0;	// P62
+  uses interface CC2420Register as SECCTRL1;	// P62
   uses interface CC2420Ram as KEY0;
   uses interface CC2420Ram as KEY1;
   uses interface CC2420Ram as TXNONCE;

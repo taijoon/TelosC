@@ -56,17 +56,17 @@ module CC2420ReceiveP @safe() {
   uses interface GpioInterrupt as InterruptFIFOP;
 
   uses interface Resource as SpiResource;
-  uses interface CC2420Fifo as RXFIFO;
-  uses interface CC2420Strobe as SACK;
-  uses interface CC2420Strobe as SFLUSHRX;
+  uses interface CC2420Fifo as RXFIFO;				// P62
+  uses interface CC2420Strobe as SACK;				// P61
+  uses interface CC2420Strobe as SFLUSHRX;		// P61
   uses interface CC2420Packet;
   uses interface CC2420PacketBody;
   uses interface CC2420Config;
   uses interface PacketTimeStamp<T32khz,uint32_t>;
 
-  uses interface CC2420Strobe as SRXDEC;
-  uses interface CC2420Register as SECCTRL0;
-  uses interface CC2420Register as SECCTRL1;
+  uses interface CC2420Strobe as SRXDEC;			// P61
+  uses interface CC2420Register as SECCTRL0;	// P62
+  uses interface CC2420Register as SECCTRL1;	// P62
   uses interface CC2420Ram as KEY0;
   uses interface CC2420Ram as KEY1;
   uses interface CC2420Ram as RXNONCE;
